@@ -50,9 +50,7 @@ const SITE_CONTENT = {
     { name: "Léa", text: "其实那天收到你的明信片，我开心了一整天" }
   ],
 
-  // 官方 YouTube 音乐视频 ID（播放器会嵌入 YouTube；访客需要点击播放）
-  youtubeMusicVideoId: "WnUR3be5Ebk",
-
-  // 本地音乐文件备用配置：文件放在 music/ 目录下，如 ["song1.mp3"]
+  // 背景音乐 —— mp3 放进 music 文件夹后写文件名，如 ["song1.mp3"]
+  // 不填时播放器会弹内置的小八音盒
   music: []
 };
