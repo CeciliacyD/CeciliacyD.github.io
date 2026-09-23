@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Fontaine · 许愿喷泉</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Gaegu:wght@400;700&family=Caveat:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="fountain-body">
+
+  <!-- 🖼 大大的水彩喷泉动画（生成中先用原画作海报帧） -->
+  <video class="fountain-art" src="./assets/喷泉动画.mp4" poster="./assets/水彩喷泉花园.png" autoplay muted loop playsinline></video>
+
+  <!-- ✨ 画上的亮晶晶 -->
+  <span class="star" style="left:20%; top:26%; color:#E9C46A; --d:0s">✦</span>
+  <span class="star" style="left:64%; top:20%; color:#AFC6E8; --d:.7s">✦</span>
+  <span class="star" style="left:76%; top:38%; color:#D8B7C9; --d:1.3s">✦</span>
+  <span class="star" style="left:30%; top:44%; color:#AFC6E8; --d:1.9s">✦</span>
+  <span class="star" style="left:47%; top:16%; color:#D8B7C9; --d:2.4s">✦</span>
+  <span class="star" style="left:12%; top:55%; color:#E9C46A; --d:1.6s">✦</span>
+  <span class="star" style="left:84%; top:58%; color:#AFC6E8; --d:.4s">✦</span>
+
+  <!-- 🌸 飘落的花瓣 -->
+  <span class="petal" style="--l:6%; --d:0s; --s:15s"></span>
+  <span class="petal" style="--l:18%; --d:3s; --s:18s"></span>
+  <span class="petal" style="--l:38%; --d:1.5s; --s:16s"></span>
+  <span class="petal" style="--l:58%; --d:4s; --s:19s"></span>
+  <span class="petal" style="--l:78%; --d:2.2s; --s:17s"></span>
+  <span class="petal" style="--l:92%; --d:5s; --s:16s"></span>
+
+  <!-- 文字与金币 -->
+  <div class="fountain-ui">
+    <p class="fountain-title">Bienvenue à <span>la fontaine</span></p>
+    <p class="fountain-sub">扔一枚金币，许个愿，然后进来坐坐 ✧</p>
+    <button class="coin-btn" id="coin-btn" aria-label="扔一枚金币">
+      <span class="coin" id="coin">✿</span>
+      <span class="coin-label">faites un vœu · 扔金币</span>
+    </button>
+    <p class="fountain-wish hidden" id="wish-text">Bienvenue dans mon monde ♡</p>
+  </div>
+
+  <span class="splash-sparkle" id="sparkle">✧</span>
+
+  <script src="./content.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

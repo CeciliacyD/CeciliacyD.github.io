@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quotidien · 小日常</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Gaegu:wght@400;700&family=Caveat:wght@600&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <nav class="topnav">
+    <span class="nav-brand">c'est moi ✿</span>
+    <a href="./home.html">accueil · 首页</a>
+    <a href="./about.html">à propos · 关于</a>
+    <a href="./daily.html" class="active">quotidien · 日常</a>
+    <a href="./wall.html">coin des amis · 留言</a>
+  </nav>
+
+  <main class="page-body">
+    <div class="sheet">
+      <span class="washi"></span>
+      <h2 class="section-title"><span class="script">quotidien</span><small>小日常</small></h2>
+      <div class="pearl-row"></div>
+      <p class="section-sub">贴上照片、写一句话，都是收藏 ✧</p>
+
+      <button class="edit-btn" id="daily-edit">✏️ 编辑</button>
+      <div class="edit-lock-row hidden" id="daily-lock">
+        <input class="note-input" id="daily-pass" type="password" placeholder="输入暗号才能编辑…" />
+        <button class="note-send" id="daily-unlock">解锁 ♡</button>
+      </div>
+
+      <div class="daily-grid" id="daily-grid"></div>
+
+      <!-- 添加卡片 -->
+      <button class="daily-add" id="daily-add">＋ 贴一张新纸条</button>
+      <form class="daily-form hidden" id="daily-form">
+        <label class="daily-photo-pick">
+          <input type="file" id="daily-photo" accept="image/*" hidden />
+          <span id="photo-label">📷 选一张照片（可不选）</span>
+        </label>
+        <input class="note-input" id="daily-text" type="text" maxlength="120" placeholder="写点什么…" />
+        <div class="daily-form-btns">
+          <button class="note-send" type="submit">贴上去 ✧</button>
+          <button class="note-cancel" type="button" id="daily-cancel">先不贴</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <div class="player" id="player">
+    <button class="player-toggle" id="player-toggle" aria-label="播放器">♪</button>
+    <div class="player-panel hidden" id="player-panel">
+      <p class="player-title">musique · 背景音乐</p>
+      <div class="player-controls">
+        <button id="prev-btn">⏮</button>
+        <button id="play-btn">▶</button>
+        <button id="next-btn">⏭</button>
+      </div>
+      <p class="player-now" id="player-now">—</p>
+      <p class="player-hint">mp3 放进 music 文件夹就能换歌</p>
+    </div>
+  </div>
+
+  <script src="./content.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

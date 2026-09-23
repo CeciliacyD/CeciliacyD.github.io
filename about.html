@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À propos · 关于我</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Gaegu:wght@400;700&family=Caveat:wght@600&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <nav class="topnav">
+    <span class="nav-brand">c'est moi ✿</span>
+    <a href="./home.html">accueil · 首页</a>
+    <a href="./about.html" class="active">à propos · 关于</a>
+    <a href="./daily.html">quotidien · 日常</a>
+    <a href="./wall.html">coin des amis · 留言</a>
+  </nav>
+
+  <main class="page-body">
+    <div class="sheet">
+      <span class="washi"></span>
+      <h2 class="section-title"><span class="script">à propos</span><small>关于我</small></h2>
+      <div class="pearl-row"></div>
+      <button class="edit-btn" id="about-edit">✏️ 编辑</button>
+      <div class="edit-lock-row hidden" id="about-lock">
+        <input class="note-input" id="about-pass" type="password" placeholder="输入暗号才能编辑…" />
+        <button class="note-send" id="about-unlock">解锁 ♡</button>
+      </div>
+      <div class="frame-size-row hidden" id="frame-size-row">
+        <span>相框大小</span>
+        <input type="range" id="frame-size" min="180" max="460" value="280" />
+      </div>
+      <div class="about-row">
+        <div class="frame-card">
+          <span class="frame-emoji" id="about-photo">🎀</span>
+          <img class="frame-photo hidden" id="about-photo-img" alt="我的照片" />
+          <span class="frame-caption">moi ~</span>
+          <button class="photo-change hidden" id="photo-change">📷 换上我的照片</button>
+          <input type="file" id="photo-file" accept="image/*" hidden />
+        </div>
+        <p class="about-lines" id="about-text"></p>
+      </div>
+      <div class="likes" id="likes-list"></div>
+      <button class="daily-add hidden" id="channel-add">＋ 加一个新频道</button>
+      <div class="channel-form hidden" id="channel-form">
+        <div class="cf-row">
+          <input class="note-input cf-icon" id="cf-icon" maxlength="4" placeholder="图标" />
+          <div class="cf-picks" id="cf-picks"></div>
+        </div>
+        <input class="note-input" id="cf-label" maxlength="10" placeholder="频道的名字（如：我的手帐）" />
+        <input class="note-input" id="cf-url" placeholder="点开后去哪个页面？（可不填，如 ./daily.html 或网址）" />
+        <div class="daily-form-btns">
+          <button class="note-send" id="cf-save" type="button">加上 ✧</button>
+          <button class="note-cancel" id="cf-cancel" type="button">先不加</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="player" id="player">
+    <button class="player-toggle" id="player-toggle" aria-label="播放器">♪</button>
+    <div class="player-panel hidden" id="player-panel">
+      <p class="player-title">musique · 背景音乐</p>
+      <div class="player-controls">
+        <button id="prev-btn">⏮</button>
+        <button id="play-btn">▶</button>
+        <button id="next-btn">⏭</button>
+      </div>
+      <p class="player-now" id="player-now">—</p>
+      <p class="player-hint">mp3 放进 music 文件夹就能换歌</p>
+    </div>
+  </div>
+
+  <script src="./content.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

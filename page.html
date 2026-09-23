@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ma page · 我的小页面</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Gaegu:wght@400;700&family=Caveat:wght@600&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <nav class="topnav">
+    <span class="nav-brand">c'est moi ✿</span>
+    <a href="./home.html">accueil · 首页</a>
+    <a href="./about.html">à propos · 关于</a>
+    <a href="./daily.html">quotidien · 日常</a>
+    <a href="./wall.html">coin des amis · 留言</a>
+  </nav>
+
+  <main class="page-body">
+    <div class="sheet">
+      <span class="washi"></span>
+      <h2 class="section-title"><span class="script" id="page-title">ma page</span><small id="page-title-cn">我的小页面</small></h2>
+      <div class="pearl-row"></div>
+
+      <button class="edit-btn" id="page-edit">✏️ 编辑</button>
+      <div class="edit-lock-row hidden" id="page-lock">
+        <input class="note-input" id="page-pass" type="password" placeholder="输入暗号才能编辑…" />
+        <button class="note-send" id="page-unlock">解锁 ♡</button>
+      </div>
+
+      <!-- 照片墙 -->
+      <div class="daily-grid" id="page-photos"></div>
+      <button class="daily-add hidden" id="page-photo-add">📷 加一张照片</button>
+      <input type="file" id="page-photo-file" accept="image/*" hidden />
+
+      <!-- 文字区 -->
+      <div class="page-text" id="page-text">在这里写下这个频道的故事 ✧（点「编辑」开始）</div>
+      <div class="daily-form-btns" style="justify-content:center; margin-top:18px;">
+        <button class="note-send hidden" id="page-save">保存 ♡</button>
+      </div>
+    </div>
+  </main>
+
+  <div class="player" id="player">
+    <button class="player-toggle" id="player-toggle" aria-label="播放器">♪</button>
+    <div class="player-panel hidden" id="player-panel">
+      <p class="player-title">musique · 背景音乐</p>
+      <div class="player-controls">
+        <button id="prev-btn">⏮</button>
+        <button id="play-btn">▶</button>
+        <button id="next-btn">⏭</button>
+      </div>
+      <p class="player-now" id="player-now">—</p>
+      <p class="player-hint">mp3 放进 music 文件夹就能换歌</p>
+    </div>
+  </div>
+
+  <script src="./content.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cecilia's Room · 首页</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Gaegu:wght@400;700&family=Caveat:wght@600&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <nav class="topnav">
+    <span class="nav-brand">c'est moi ✿</span>
+    <a href="./home.html" class="active">accueil · 首页</a>
+    <a href="./about.html">à propos · 关于</a>
+    <a href="./daily.html">quotidien · 日常</a>
+    <a href="./wall.html">coin des amis · 留言</a>
+  </nav>
+
+  <header class="hero">
+    <div class="scallop-wrap">
+      <div class="scallop-bg"></div>
+      <div class="scallop-content">
+        <img class="hero-sticker" src="./assets/法式梳妆台贴纸蓝结.png" alt="法式梳妆台贴纸" />
+        <h1 class="hero-name" id="hero-name">Cecilia's Room</h1>
+        <p class="hero-sub">u n &nbsp;p e t i t &nbsp;c o i n &nbsp;d o u x</p>
+        <p class="hero-cn">我的温柔小角落 · 欢迎来坐坐</p>
+        <nav class="hero-nav">
+          <a href="./about.html">关于我</a>
+          <a href="./daily.html">小日常</a>
+          <a href="./wall.html">留言墙</a>
+        </nav>
+      </div>
+    </div>
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+  </header>
+
+  <footer class="footer footer-home">
+    <svg class="ribbon" viewBox="0 0 800 40" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 20 Q25 4 50 20 T100 20 T150 20 T200 20 T250 20 T300 20 T350 20 T400 20 T450 20 T500 20 T550 20 T600 20 T650 20 T700 20 T750 20 T800 20"
+            fill="none" stroke="#E3C4D2" stroke-width="2"/>
+    </svg>
+    <p class="footer-text">made with love · <span class="script">Cecilia</span></p>
+  </footer>
+
+  <div class="player" id="player">
+    <button class="player-toggle" id="player-toggle" aria-label="播放器">♪</button>
+    <div class="player-panel hidden" id="player-panel">
+      <p class="player-title">musique · 背景音乐</p>
+      <div class="player-controls">
+        <button id="prev-btn">⏮</button>
+        <button id="play-btn">▶</button>
+        <button id="next-btn">⏭</button>
+      </div>
+      <p class="player-now" id="player-now">—</p>
+      <p class="player-hint">mp3 放进 music 文件夹就能换歌</p>
+    </div>
+  </div>
+
+  <script src="./content.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

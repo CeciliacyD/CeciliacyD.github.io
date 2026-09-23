@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coin des amis · 留言墙</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Gaegu:wght@400;700&family=Caveat:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <nav class="topnav">
+    <span class="nav-brand">c'est moi ✿</span>
+    <a href="./home.html">accueil · 首页</a>
+    <a href="./about.html">à propos · 关于</a>
+    <a href="./daily.html">quotidien · 日常</a>
+    <a href="./wall.html" class="active">coin des amis · 留言</a>
+  </nav>
+
+  <main class="page-body">
+    <div class="sheet">
+      <span class="washi"></span>
+      <h2 class="section-title"><span class="script">coin des amis</span><small>留言墙</small></h2>
+      <div class="pearl-row"></div>
+
+      <!-- 两个板块的切换 -->
+      <div class="board-tabs">
+        <button class="board-tab active" id="tab-public">💌 留言墙 <small>大家都能看</small></button>
+        <button class="board-tab" id="tab-whisper">🤫 悄悄话 <small>只给 Cecilia 看</small></button>
+      </div>
+
+      <!-- 板块一：公开弹幕留言墙 -->
+      <section id="panel-public">
+        <div class="danmaku-stage" id="danmaku-stage"></div>
+        <form class="note-form" id="note-form">
+          <input class="note-name" id="note-name" type="text" maxlength="12" placeholder="名字 (可选)" />
+          <input class="note-input" id="note-input" type="text" maxlength="60" placeholder="想对 Cecilia 说的话…" required />
+          <button class="note-send" type="submit">送出 ✧</button>
+        </form>
+        <p class="board-note">小纸条会一直飘在这里</p>
+      </section>
+
+      <!-- 板块二：悄悄话（谁都能投信，只有暗号能读） -->
+      <section id="panel-whisper" class="hidden">
+        <!-- 投信口：永远对外开放 -->
+        <form class="note-form" id="whisper-form">
+          <input class="note-name" id="whisper-name" type="text" maxlength="12" placeholder="名字 (可选)" />
+          <input class="note-input" id="whisper-input" type="text" maxlength="80" placeholder="悄悄对 Cecilia 说…只有她能看到 🤫" required />
+          <button class="note-send" type="submit">偷偷放进信匣 🤫</button>
+        </form>
+
+        <!-- 锁：没输对暗号之前看不到内容 -->
+        <div class="whisper-lock" id="whisper-lock">
+          <p class="lock-icon">🔒</p>
+          <p class="lock-hint">这里的话只说给 Cecilia 一个人听<br/>输入暗号才能打开小信匣</p>
+          <input class="note-input" id="whisper-pass" type="password" placeholder="暗号…" />
+          <button class="note-send" id="whisper-unlock">解锁 ♡</button>
+        </div>
+
+        <!-- 解锁后：悄悄话信匣 -->
+        <div id="whisper-box" class="hidden">
+          <div class="whisper-grid" id="whisper-grid"></div>
+          <p class="board-note">悄悄话只有输入暗号才能看到 · 想改暗号就改 content.js 里的 whisperPassword</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="player" id="player">
+    <button class="player-toggle" id="player-toggle" aria-label="播放器">♪</button>
+    <div class="player-panel hidden" id="player-panel">
+      <p class="player-title">musique · 背景音乐</p>
+      <div class="player-controls">
+        <button id="prev-btn">⏮</button>
+        <button id="play-btn">▶</button>
+        <button id="next-btn">⏭</button>
+      </div>
+      <p class="player-now" id="player-now">—</p>
+      <p class="player-hint">mp3 放进 music 文件夹就能换歌</p>
+    </div>
+  </div>
+
+  <script src="./content.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
