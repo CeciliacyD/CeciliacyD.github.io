@@ -428,7 +428,14 @@ function stopPlay() {
   localStorage.setItem("roomPlaying", "0");
 }
 
-if (playerToggle) {
+if (playerToggle && SITE_CONTENT.youtubeMusicVideoId) {
+  panel.classList.add("youtube-panel");
+  panel.innerHTML = `
+    <p class="player-title">musique · 背景音乐</p>
+    <iframe class="youtube-music" src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(SITE_CONTENT.youtubeMusicVideoId)}?rel=0" title="Billie Eilish — idontwannabeyouanymore (Official Audio)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p class="player-hint">点击视频中的播放键开始</p>`;
+  playerToggle.addEventListener("click", () => panel.classList.toggle("hidden"));
+} else if (playerToggle) {
   playerToggle.addEventListener("click", () => {
     panel.classList.toggle("hidden");
     if (!playlist.length) { buildPlaylist(); idx = +(localStorage.getItem("roomTrack") || 0); loadTrack(idx); }
